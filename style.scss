@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;700&display=swap");
+
+$blue: #01b1e7;
+$orange: #d35a08;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #000f18;
+  color: $blue;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+.left-strip,
+.right-strip {
+  position: absolute;
+  width: 1px;
+  height: 100vh;
+  background: $orange;
+  z-index: -1;
+}
+
+.left-strip {
+  left: 100px;
+}
+.right-strip {
+  right: 100px;
+}
+
+.middle-strip {
+  position: absolute;
+  width: 70px;
+  height: 2000px;
+  background: $orange;
+  opacity: 0.2;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  transform: rotate(40deg);
+  z-index: -1;
+  margin-top: -300px;
+}
+
+.logo {
+  line-height: 40px;
+  float: left;
+  margin: 1.2em 0 0 2.2em;
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+}
+
+.sidetext {
+  position: absolute;
+  left: -120px;
+  top: 50%;
+  transform: rotate(-90deg);
+}
+
+.sidetext ul {
+  list-style: none;
+}
+
+.sidetext ul li {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  margin-left: 45px;
+}
+
+.menu-btn {
+  float: right;
+  margin: 1.2em 2.5em 0 0;
+  line-height: 40px;
+
+  .menu-icon {
+    font-size: 20px;
+  }
+}
+
+.social-media {
+  position: absolute;
+  right: -130px;
+  top: 50%;
+  transform: rotate(90deg);
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 60px;
+    }
+  }
+}
+
+.person img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  max-height: 100vh;
+  margin-left: -60px;
+  z-index: 1;
+}
+
+.content {
+  position: absolute;
+  top: 25%;
+  left: 48%;
+  width: 40%;
+
+  p {
+    margin: 0;
+    font-family: "Creepster";
+    font-size: 30px;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: "Creepster";
+    font-size: 80px;
+    color: $orange;
+    letter-spacing: 6px;
+  }
+
+  button {
+    display: inline-block;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    margin-top: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  .btn-1 {
+    background: $blue;
+    color: #000f18;
+    padding: 20px 60px;
+    border: none;
+    margin-right: 20px;
+
+    &:hover {
+      background: $orange;
+    }
+  }
+
+  .btn-2 {
+    background: transparent;
+    color: $orange;
+    padding: 20px 35px;
+    border: 1px solid $orange;
+
+    &:hover {
+      background: $blue;
+      border: 1px solid $blue;
+      color: #000f18;
+    }
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .dot {
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    background: $blue;
+    margin: 0 0.5em;
+    cursor: pointer;
+
+    &:nth-child(2) {
+      background: $orange;
+    }
+  }
+}
+
+.bottomnav {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+
+  .bottomnav-title {
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      border-top: 2px solid $orange;
+      width: 65px;
+      margin: 0 20px 0 0;
+      transform: translateY(-5px);
+    }
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+
+  ul {
+    list-style: none;
+    li {
+      position: absolute;
+      padding: 15px 18px;
+      font-size: 12px;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:nth-child(1) {
+        right: -20px;
+        bottom: 115px;
+        background: $orange;
+        border: 1px solid $orange;
+        color: white;
+
+        &:hover {
+          background: transparent;
+          color: white;
+          border: 1px solid $orange;
+        }
+      }
+
+      &:nth-child(2) {
+        right: -20px;
+        bottom: 35px;
+        background: $blue;
+        border: 1px solid $blue;
+        color: #000f18;
+
+        &:hover {
+          background: transparent;
+          color: white;
+          border: 1px solid $blue;
+        }
+      }
+    }
+  }
+}
